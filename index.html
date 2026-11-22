@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美女抠逼 - 视频品牌官网 | 原创高清内容生态</title>
+<meta name="description" content="美女抠逼官方网站，专注原创高清视频内容生态，汇聚专业创作者、精品专题与企业动态，打造值得信赖的视频品牌社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131a2b'/%3E%3Cpath d='M24 18l24 14-24 14z' fill='%23ff5a5f'/%3E%3C/svg%3E">
+<style>
+:root{
+  --nb-bg:#0d1220;
+  --nb-bg2:#141b2e;
+  --nb-card:#182136;
+  --nb-line:rgba(255,255,255,.08);
+  --nb-ink:#eef2fb;
+  --nb-sub:#9aa7c2;
+  --nb-accent:#ff5a5f;
+  --nb-accent2:#3ce3b4;
+  --nb-glow:rgba(255,90,95,.35);
+  --nb-radius:16px;
+  --nb-sticky:118px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 80% -10%,rgba(255,90,95,.12),transparent 60%),var(--nb-bg);
+  color:var(--nb-ink);
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+.nb-wrap{width:min(1180px,92vw);margin:0 auto}
+.nb-section{padding:64px 0}
+.nb-section--alt{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+.nb-h2{font-size:clamp(22px,3vw,32px);margin:0 0 8px;letter-spacing:.5px}
+.nb-h2 span{color:var(--nb-accent)}
+.nb-lead{color:var(--nb-sub);margin:0 0 32px;max-width:760px}
+.nb-h3{font-size:18px;margin:0 0 6px}
+.nb-muted{color:var(--nb-sub);font-size:14px}
+.nb-tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;background:rgba(255,90,95,.14);color:#ff9a9d;margin-right:6px}
+.nb-tag--green{background:rgba(60,227,180,.12);color:var(--nb-accent2)}
+.nb-btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:600;transition:.22s;background:rgba(255,255,255,.07);color:var(--nb-ink)}
+.nb-btn:hover{background:rgba(255,255,255,.14);transform:translateY(-1px)}
+.nb-btn--primary{background:linear-gradient(135deg,var(--nb-accent),#ff8a5c);color:#fff;box-shadow:0 8px 24px var(--nb-glow)}
+.nb-btn--primary:hover{filter:brightness(1.08)}
+.nb-btn--ghost{border:1px solid var(--nb-line)}
+.nb-btn--sm{padding:6px 12px;font-size:12px;border-radius:8px}
+
+/* sticky top */
+.nb-topstack{position:sticky;top:0;z-index:60}
+.nb-notice{
+  background:linear-gradient(90deg,var(--nb-accent),#ff8a5c 55%,#3ce3b4);
+  color:#0d1220;font-size:13px;font-weight:600;
+}
+.nb-notice .nb-wrap{display:flex;align-items:center;gap:12px;padding:7px 0;overflow:hidden}
+.nb-notice b{background:#0d1220;color:#fff;border-radius:6px;padding:1px 8px;font-size:12px;flex:none}
+.nb-notice p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nb-notice a{text-decoration:underline;flex:none}
+.nb-header{background:rgba(13,18,32,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--nb-line)}
+.nb-header .nb-wrap{display:flex;align-items:center;gap:26px;height:64px}
+.nb-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.5px;flex:none}
+.nb-logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--nb-accent),#ff8a5c);display:grid;place-items:center;font-style:normal;font-size:13px;color:#fff}
+.nb-nav{display:flex;gap:22px;font-size:14px;color:var(--nb-sub);margin-left:8px}
+.nb-nav a:hover{color:var(--nb-ink)}
+.nb-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid var(--nb-line);border-radius:10px;padding:6px 12px;width:260px}
+.nb-search input{border:none;background:transparent;color:var(--nb-ink);outline:none;font-size:13px;width:100%}
+.nb-search input::placeholder{color:#6e7a94}
+.nb-burger{display:none;margin-left:auto;background:rgba(255,255,255,.07);border:1px solid var(--nb-line);color:var(--nb-ink);border-radius:9px;padding:8px 12px;cursor:pointer}
+.nb-mobile{display:none;border-top:1px solid var(--nb-line);background:var(--nb-bg2)}
+.nb-mobile.open{display:block}
+.nb-mobile a{display:block;padding:12px 4vw;border-bottom:1px solid var(--nb-line);color:var(--nb-sub)}
+.nb-search-tip{display:none;margin:0 auto;padding:10px 0 0;font-size:13px;color:var(--nb-accent2)}
+.nb-search-tip.show{display:block}
+
+/* hero */
+.nb-hero{padding:56px 0 40px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:44px;align-items:center}
+.nb-hero__eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--nb-accent2);border:1px solid rgba(60,227,180,.3);padding:4px 12px;border-radius:999px;margin-bottom:18px}
+.nb-hero h1{font-size:clamp(34px,5.2vw,58px);line-height:1.15;margin:0 0 16px;letter-spacing:1px}
+.nb-hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--nb-accent),#ffb15c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nb-hero__intro{color:var(--nb-sub);font-size:15px;max-width:560px;margin:0 0 24px}
+.nb-hero__stats{display:flex;gap:26px;flex-wrap:wrap;margin:0 0 26px;padding:0;list-style:none}
+.nb-hero__stats li b{display:block;font-size:24px;color:var(--nb-ink)}
+.nb-hero__stats li span{font-size:12px;color:var(--nb-sub)}
+.nb-hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+.nb-hero__visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--nb-line);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.nb-hero__visual img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.nb-hero__badge{position:absolute;left:16px;bottom:16px;background:rgba(13,18,32,.78);backdrop-filter:blur(8px);border:1px solid var(--nb-line);padding:10px 14px;border-radius:12px;font-size:12px;color:var(--nb-sub)}
+.nb-hero__badge b{display:block;color:var(--nb-ink);font-size:14px}
+
+/* focus + list */
+.nb-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px}
+.nb-focus__main{background:var(--nb-card);border:1px solid var(--nb-line);border-radius:var(--nb-radius);overflow:hidden;transition:.24s}
+.nb-focus__main:hover{border-color:rgba(255,90,95,.4);transform:translateY(-2px)}
+.nb-focus__main img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.nb-focus__body{padding:22px}
+.nb-focus__body p{color:var(--nb-sub);font-size:14px;margin:8px 0 14px}
+.nb-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--nb-sub);margin-bottom:12px}
+.nb-mini-list{display:grid;gap:14px}
+.nb-mini{display:flex;gap:14px;background:var(--nb-bg2);border:1px solid var(--nb-line);border-radius:12px;padding:14px;transition:.2s}
+.nb-mini:hover{border-color:rgba(60,227,180,.35)}
+.nb-mini img{width:92px;height:64px;object-fit:cover;border-radius:9px;flex:none}
+.nb-mini h4{margin:0 0 4px;font-size:15px}
+.nb-mini p{margin:0;font-size:12.5px;color:var(--nb-sub)}
+
+/* sections / cards */
+.nb-grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.nb-card{background:var(--nb-card);border:1px solid var(--nb-line);border-radius:var(--nb-radius);padding:22px;transition:.24s}
+.nb-card:hover{transform:translateY(-4px);border-color:rgba(255,90,95,.35);box-shadow:0 18px 40px rgba(0,0,0,.36)}
+.nb-card img{border-radius:10px;aspect-ratio:16/9;object-fit:cover;width:100%;margin-bottom:14px}
+.nb-card p{color:var(--nb-sub);font-size:13.5px;margin:6px 0 0}
+
+/* video rows */
+.nb-video-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.nb-vrow{background:var(--nb-bg2);border:1px solid var(--nb-line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;transition:.2s}
+.nb-vrow:hover{border-color:rgba(255,90,95,.4)}
+.nb-vrow__top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.nb-vrow h4{margin:0;font-size:15.5px}
+.nb-vrow p{margin:0;font-size:13px;color:var(--nb-sub)}
+.nb-vrow__foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px;border-top:1px dashed var(--nb-line)}
+.nb-count{font-size:12px;color:var(--nb-sub)}
+.nb-like,.nb-fav{cursor:pointer;font-size:12px;color:var(--nb-sub);background:rgba(255,255,255,.05);border:1px solid var(--nb-line);border-radius:8px;padding:4px 10px;transition:.2s}
+.nb-like.on{color:#ff9a9d;border-color:rgba(255,90,95,.5)}
+.nb-fav.on{color:var(--nb-accent2);border-color:rgba(60,227,180,.5)}
+
+/* specials */
+.nb-spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.nb-spec__item{background:linear-gradient(160deg,rgba(255,90,95,.1),transparent 55%),var(--nb-card);border:1px solid var(--nb-line);border-radius:var(--nb-radius);padding:24px}
+.nb-spec__item ol{margin:14px 0 0;padding-left:18px;color:var(--nb-sub);font-size:13.5px;line-height:2}
+.nb-spec__item ol li::marker{color:var(--nb-accent)}
+
+/* authors */
+.nb-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.nb-author{display:flex;gap:16px;background:var(--nb-bg2);border:1px solid var(--nb-line);border-radius:14px;padding:18px;cursor:pointer;transition:.22s}
+.nb-author:hover{border-color:rgba(60,227,180,.4);transform:translateY(-2px)}
+.nb-avatar{width:56px;height:56px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;font-size:20px;color:#0d1220}
+.nb-author h4{margin:0 0 2px;font-size:15.5px}
+.nb-author .nb-muted{font-size:12px}
+
+/* index list */
+.nb-index{display:grid;gap:14px}
+.nb-index__item{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;background:var(--nb-card);border:1px solid var(--nb-line);border-radius:12px;padding:14px 18px;transition:.2s}
+.nb-index__item:hover{border-color:rgba(255,90,95,.35)}
+.nb-index__num{font-size:20px;font-weight:800;color:var(--nb-accent);min-width:34px}
+.nb-index__item p{margin:2px 0 0;color:var(--nb-sub);font-size:13px}
+
+/* comments */
+.nb-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-comment{background:var(--nb-bg2);border:1px solid var(--nb-line);border-left:3px solid rgba(255,90,95,.55);border-radius:10px;padding:16px 18px}
+.nb-comment p{margin:0 0 8px;font-size:13.5px;color:#cfd8ea}
+.nb-comment span{font-size:12px;color:var(--nb-sub)}
+
+/* faq */
+.nb-faq{display:grid;gap:12px}
+.nb-faq details{background:var(--nb-bg2);border:1px solid var(--nb-line);border-radius:12px;padding:16px 18px;transition:.2s}
+.nb-faq details[open]{border-color:rgba(60,227,180,.4)}
+.nb-faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.nb-faq summary::-webkit-details-marker{display:none}
+.nb-faq summary::after{content:"+";color:var(--nb-accent);font-size:20px;line-height:1}
+.nb-faq details[open] summary::after{content:"–"}
+.nb-faq p{margin:12px 0 0;color:var(--nb-sub);font-size:13.5px}
+
+/* partners */
+.nb-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.nb-partner{background:var(--nb-bg2);border:1px solid var(--nb-line);border-radius:12px;padding:18px;text-align:center;font-size:14px;color:var(--nb-sub);transition:.2s}
+.nb-partner:hover{color:var(--nb-ink);border-color:rgba(255,90,95,.35)}
+.nb-partner b{display:block;color:var(--nb-ink);margin-bottom:4px;font-size:15px}
+
+/* deep analysis */
+.nb-analysis{background:var(--nb-bg2);border:1px solid var(--nb-line);border-radius:20px;padding:36px}
+.nb-analysis h3{margin-top:26px}
+.nb-analysis h3:first-child{margin-top:0}
+.nb-analysis p{color:#c3cde0;font-size:14.5px}
+.nb-analysis .nb-tag{margin-bottom:8px}
+
+/* footer */
+.nb-footer{border-top:1px solid var(--nb-line);background:#0a0f1a;padding:48px 0 30px;font-size:13px;color:var(--nb-sub)}
+.nb-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.nb-footer h5{margin:0 0 12px;color:var(--nb-ink);font-size:14px}
+.nb-footer a{display:block;margin-bottom:8px}
+.nb-footer a:hover{color:var(--nb-ink)}
+.nb-footer__bottom{border-top:1px solid var(--nb-line);padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* toast / modal / backtop */
+.nb-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#0a0f1a;border:1px solid rgba(60,227,180,.5);color:var(--nb-accent2);padding:10px 20px;border-radius:10px;font-size:13px;opacity:0;pointer-events:none;transition:.3s;z-index:99}
+.nb-toast.show{opacity:1;transform:translate(-50%,0)}
+.nb-modal{position:fixed;inset:0;background:rgba(5,8,15,.72);backdrop-filter:blur(4px);display:none;place-items:center;padding:20px;z-index:100}
+.nb-modal.show{display:grid}
+.nb-modal__box{background:var(--nb-card);border:1px solid var(--nb-line);border-radius:18px;max-width:480px;width:100%;padding:26px;max-height:82vh;overflow:auto}
+.nb-modal__box h3{margin:0 0 12px}
+.nb-modal__box p{color:var(--nb-sub);font-size:14px}
+.nb-modal__close{margin-top:18px;width:100%;justify-content:center}
+.nb-backtop{position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;background:var(--nb-card);border:1px solid var(--nb-line);color:var(--nb-ink);font-size:18px;cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.3s;z-index:80}
+.nb-backtop.show{opacity:1;pointer-events:auto}
+.nb-backtop:hover{border-color:rgba(255,90,95,.5);color:var(--nb-accent)}
+
+@media (max-width:980px){
+  .nb-hero{grid-template-columns:minmax(0,1fr);gap:30px}
+  .nb-focus{grid-template-columns:minmax(0,1fr)}
+  .nb-grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nb-authors,.nb-spec{grid-template-columns:minmax(0,1fr)}
+  .nb-footer__grid{grid-template-columns:1fr 1fr}
+  .nb-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .nb-nav,.nb-search{display:none}
+  .nb-burger{display:block}
+  .nb-grid3,.nb-video-row,.nb-comments,.nb-footer__grid{grid-template-columns:minmax(0,1fr)}
+  .nb-index__item{grid-template-columns:auto minmax(0,1fr)}
+  .nb-section{padding:46px 0}
+  .nb-analysis{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="nb-topstack" id="nbTop">
+  <div class="nb-notice">
+    <div class="nb-wrap">
+      <b>官方发布</b>
+      <p>「美女抠逼」2026 秋季精品片单已上线 · 新增 12 部原创高清内容与 3 场创作者直播 · 首届社区创作挑战赛同步开启报名</p>
+      <a href="#nb-specials">查看详情</a>
+    </div>
+  </div>
+  <header class="nb-header">
+    <div class="nb-wrap">
+      <a class="nb-logo" href="#nbTop"><i>▶</i>美女抠逼</a>
+      <nav class="nb-nav">
+        <a href="#nb-focus">精品内容</a>
+        <a href="#nb-specials">专题企划</a>
+        <a href="#nb-authors">创作者</a>
+        <a href="#nb-analysis">品牌解析</a>
+        <a href="#nb-faq">帮助中心</a>
+      </nav>
+      <div class="nb-search">
+        <span aria-hidden="true">🔍</span>
+        <input id="nbSearchInput" type="search" placeholder="搜索视频、专题或创作者" aria-label="站内搜索">
+      </div>
+      <button class="nb-burger" id="nbBurger" aria-expanded="false" aria-controls="nbMobileNav">菜单</button>
+    </div>
+    <div class="nb-mobile" id="nbMobileNav">
+      <a href="#nb-focus">精品内容</a>
+      <a href="#nb-specials">专题企划</a>
+      <a href="#nb-authors">创作者</a>
+      <a href="#nb-analysis">品牌解析</a>
+      <a href="#nb-faq">帮助中心</a>
+      <a href="#nb-footer">关于我们</a>
+    </div>
+  </header>
+</div>
+<div class="nb-wrap"><p class="nb-search-tip" id="nbSearchTip" role="status" aria-live="polite"></p></div>
+
+<!-- S2 品牌首屏 -->
+<section class="nb-wrap nb-hero" aria-labelledby="nbHeroTitle">
+  <div>
+    <span class="nb-hero__eyebrow">● 官方网站 · 品牌视频门户</span>
+    <h1 id="nbHeroTitle">美女抠逼<em>官网</em></h1>
+    <p class="nb-hero__intro">作为深耕短视频与纪实影像领域的视频品牌，美女抠逼官方网站致力于为创作者与企业搭建高品质内容生态。我们以原创、正版、高清为基石，持续运营值得信赖的社区平台，让每一份真实与温暖被更多人看见。</p>
+    <ul class="nb-hero__stats">
+      <li><b data-nb-count="12800">0</b><span>累计原创视频</span></li>
+      <li><b data-nb-count="960">0</b><span>入驻专业创作者</span></li>
+      <li><b data-nb-count="4.9">0</b><span>社区口碑评分</span></li>
+    </ul>
+    <div class="nb-hero__actions">
+      <a class="nb-btn nb-btn--primary" href="#nb-focus">进入精品内容</a>
+      <a class="nb-btn nb-btn--ghost" href="#nb-authors">认识创作者</a>
+      <button class="nb-btn nb-btn--ghost" data-nb-modal="submit">我要投稿</button>
+    </div>
+  </div>
+  <div class="nb-hero__visual">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23131a2b'/%3E%3Cstop offset='1' stop-color='%23312a4d'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff5a5f'/%3E%3Cstop offset='1' stop-color='%233ce3b4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='130' r='180' fill='%23ff5a5f' opacity='.18'/%3E%3Ccircle cx='160' cy='470' r='210' fill='%233ce3b4' opacity='.14'/%3E%3Crect x='90' y='120' width='620' height='340' rx='26' fill='%230d1220' stroke='%23ffffff22'/%3E%3Cpath d='M350 220l110 70-110 70z' fill='url(%23g2)'/%3E%3Crect x='130' y='200' width='180' height='14' rx='7' fill='%23ffffff33'/%3E%3Crect x='130' y='232' width='120' height='10' rx='5' fill='%23ffffff1f'/%3E%3Crect x='130' y='400' width='240' height='10' rx='5' fill='%23ffffff26'/%3E%3Crect x='130' y='424' width='180' height='10' rx='5' fill='%23ffffff19'/%3E%3C/svg%3E" alt="美女抠逼官网首屏主视觉：播放器与品牌渐变光影" width="800" height="600">
+    <div class="nb-hero__badge"><b>秋季精品上线</b>12 部原创高清纪录短片</div>
+  </div>
+</section>
+
+<!-- S3 焦点 + 视频列表 -->
+<section class="nb-section nb-section--alt" id="nb-focus">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">精品内容<span> · 焦点推荐</span></h2>
+    <p class="nb-lead">美女抠逼官网精选原创视频与深度栏目，覆盖日常记录、创作幕后与人物访谈，以高清细节呈现真实生活的力量。</p>
+    <div class="nb-focus">
+      <article class="nb-focus__main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231b2340'/%3E%3Cstop offset='1' stop-color='%233d2a2f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Ccircle cx='200' cy='200' r='120' fill='%23ff5a5f' opacity='.2'/%3E%3Crect x='330' y='120' width='360' height='210' rx='16' fill='%230d1220' stroke='%23ffffff1f'/%3E%3Cpath d='M470 190l70 45-70 45z' fill='%23ff8a5c'/%3E%3Crect x='360' y='360' width='140' height='10' rx='5' fill='%23ffffff26'/%3E%3Crect x='360' y='384' width='250' height='8' rx='4' fill='%23ffffff17'/%3E%3C/svg%3E" alt="焦点推荐：秋季原创纪录短片片头主画面" width="800" height="450">
+        <div class="nb-focus__body">
+          <span class="nb-tag">主推</span><span class="nb-tag nb-tag--green">原创高清</span>
+          <h3 class="nb-h3" style="margin-top:10px">《镜头里的第 1000 天》：一位创作者的真实记录</h3>
+          <p>跟拍创作者 1000 天的创作日常，从手机随手拍到专业分镜策划，故事围绕坚持、成长与陪伴展开，成为本季点播口碑双高的精品内容。</p>
+          <div class="nb-meta"><span>播放 86.4 万</span><span>点赞 2.1 万</span><span>收藏 9,340</span><span>作者 · 林见深</span></div>
+          <button class="nb-btn nb-btn--primary nb-btn--sm" data-nb-modal="share">分享这部作品</button>
+        </div>
+      </article>
+      <div class="nb-mini-list">
+        <article class="nb-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%23202b45'/%3E%3Ccircle cx='60' cy='60' r='34' fill='%233ce3b4' opacity='.35'/%3E%3Crect x='110' y='42' width='64' height='8' rx='4' fill='%23ffffff33'/%3E%3Crect x='110' y='60' width='46' height='8' rx='4' fill='%23ffffff1f'/%3E%3Crect x='20' y='110' width='120' height='8' rx='4' fill='%23ffffff22'/%3E%3C/svg%3E" alt="城市探索短片封面：夜色街景与人物剪影" width="200" height="140">
+          <div><h4>夜行城市：三条老街的灯与影</h4><p>城市探索 · 人文影像 · 12 分钟</p></div>
+        </article>
+        <article class="nb-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%232b2135'/%3E%3Crect x='30' y='30' width='70' height='80' rx='10' fill='%23ff8a5c' opacity='.5'/%3E%3Ccircle cx='150' cy='70' r='26' fill='%23ff5a5f' opacity='.4'/%3E%3Crect x='30' y='120' width='140' height='6' rx='3' fill='%23ffffff26'/%3E%3C/svg%3E" alt="创作幕后短片封面：剪辑台与片段色块" width="200" height="140">
+          <div><h4>剪辑台前的第七个小时</h4><p>创作幕后 · 干货教程 · 18 分钟</p></div>
+        </article>
+        <article class="nb-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%231d2a33'/%3E%3Cpath d='M20 110c40-50 80-50 120-10l40 30H20z' fill='%233ce3b4' opacity='.3'/%3E%3Ccircle cx='150' cy='40' r='18' fill='%23ff8a5c' opacity='.6'/%3E%3Crect x='30' y='20' width='70' height='8' rx='4' fill='%23ffffff33'/%3E%3C/svg%3E" alt="户外记录短片封面：山线与日落暖光" width="200" height="140">
+          <div><h4>在山脊线上等一场落日</h4><p>户外活动 · 日常记录 · 15 分钟</p></div>
+        </article>
+        <article class="nb-mini">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%23271e2e'/%3E%3Crect x='24' y='26' width='152' height='18' rx='9' fill='%23ff5a5f' opacity='.45'/%3E%3Crect x='24' y='58' width='100' height='10' rx='5' fill='%23ffffff2b'/%3E%3Crect x='24' y='80' width='130' height='10' rx='5' fill='%23ffffff1c'/%3E%3Crect x='24' y='102' width='86' height='10' rx='5' fill='%23ffffff1c'/%3E%3C/svg%3E" alt="人物访谈短片封面：对话排版画面" width="200" height="140">
+          <div><h4>对话：镜头背后的女性创作者</h4><p>人物访谈 · 文化访谈 · 26 分钟</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- M3 热门视频流 -->
+<section class="nb-section" id="nb-videos">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">热门视频流<span> · 本周热播</span></h2>
+    <p class="nb-lead">美女抠逼平台聚合社区热度与编辑推荐，以下条目均为本周原创高清内容，支持点赞、收藏与分享，数据实时更新。</p>
+    <div class="nb-video-row" id="nbVideoRow">
+      <article class="nb-vrow">
+        <div class="nb-vrow__top">
+          <h4>把出租屋改成小型放映室</h4>
+          <span class="nb-tag">家居收纳</span>
+        </div>
+        <p>从测量到灯光布置，完整拆解一室户改造流程，含预算表与选品清单，适合想低成本提升居住体验的年轻创作者参考。</p>
+        <div class="nb-vrow__foot">
+          <span class="nb-count">作者 · 苏晚巢</span><span class="nb-count">播放 41.2 万</span>
+          <button class="nb-like" data-nb-like>♡ 1.8 万</button>
+          <button class="nb-fav" data-nb-fav>☆ 收藏</button>
+          <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+        </div>
+      </article>
+      <article class="nb-vrow">
+        <div class="nb-vrow__top">
+          <h4>三道家常菜的镜头语言</h4>
+          <span class="nb-tag">美食烹饪</span>
+        </div>
+        <p>以光影和运镜讲清一道菜的叙事节奏，从食材特写到出锅收汁，适合美食类创作者学习布光与镜头调度。</p>
+        <div class="nb-vrow__foot">
+          <span class="nb-count">作者 · 沈知味</span><span class="nb-count">播放 33.9 万</span>
+          <button class="nb-like" data-nb-like>♡ 1.4 万</button>
+          <button class="nb-fav" data-nb-fav>☆ 收藏</button>
+          <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+        </div>
+      </article>
+      <article class="nb-vrow">
+        <div class="nb-vrow__top">
+          <h4>一部手机如何完成 Vlog 收音</h4>
+          <span class="nb-tag">教程干货</span>
+        </div>
+        <p>三种百元级方案对比测试，附现场噪声采样与后期降噪参数，帮你在户外也能得到可用的对白素材。</p>
+        <div class="nb-vrow__foot">
+          <span class="nb-count">作者 · 声画实验室</span><span class="nb-count">播放 28.6 万</span>
+          <button class="nb-like" data-nb-like>♡ 9,820</button>
+          <button class="nb-fav" data-nb-fav>☆ 收藏</button>
+          <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+        </div>
+      </article>
+      <article class="nb-vrow">
+        <div class="nb-vrow__top">
+          <h4>流浪猫的第 17 个冬天</h4>
+          <span class="nb-tag">萌宠日常</span>
+        </div>
+        <p>跟拍社区喂养点的七年影像记录，讲述一只猫如何成为街区的共同记忆，兼具温度与社会责任视角。</p>
+        <div class="nb-vrow__foot">
+          <span class="nb-count">作者 · 白桃观察</span><span class="nb-count">播放 52.3 万</span>
+          <button class="nb-like" data-nb-like>♡ 2.6 万</button>
+          <button class="nb-fav" data-nb-fav>☆ 收藏</button>
+          <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S4 专题企划 -->
+<section class="nb-section nb-section--alt" id="nb-specials">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">专题企划<span> · 持续更新</span></h2>
+    <p class="nb-lead">每个专题都由美女抠逼官方编辑团队策划，围绕一个具体命题展开多集内容，是内容生态中最具影响力的精品内容板块。</p>
+    <div class="nb-spec" id="nbSpecials">
+      <article class="nb-spec__item">
+        <span class="nb-tag">更新中 · 第 4 集已上线</span>
+        <h3 class="nb-h3" style="margin-top:10px">《小城的一天》</h3>
+        <p class="nb-muted">以小城清晨到深夜的时间线，记录普通人的工作与生活，用真实细节回应“生活可以慢一点”的社区议题。</p>
+        <ol>
+          <li>第 1 集：早市开张前的一小时</li>
+          <li>第 2 集：修表铺与它的老顾客</li>
+          <li>第 3 集：夜班公交的最后一程</li>
+        </ol>
+      </article>
+      <article class="nb-spec__item">
+        <span class="nb-tag nb-tag--green">已完结 · 共 6 集</span>
+        <h3 class="nb-h3" style="margin-top:10px">《第一次按下录制键》</h3>
+        <p class="nb-muted">面向新创作者的上手专题，从选题、拍摄到发布与复盘，六集课程构成一条完整成长路径。</p>
+        <ol>
+          <li>第 1 集：先想清楚你的观众是谁</li>
+          <li>第 2 集：三分钟脚本框架练习</li>
+          <li>第 3 集：封面与标题的取舍</li>
+        </ol>
+      </article>
+      <article class="nb-spec__item">
+        <span class="nb-tag">征稿中 · 报名进行中</span>
+        <h3 class="nb-h3" style="margin-top:10px">《我的城市一角》创作挑战</h3>
+        <p class="nb-muted">面向全站创作者的城市探索挑战赛，提交 90 秒以上原创短片即视为报名，优秀作品将进入官方片单推荐。</p>
+        <ol>
+          <li>主题：一条街、一扇窗、一个背影</li>
+          <li>规则：原创实拍，禁止搬运与二创</li>
+          <li>奖励：首页推荐位与年度创作者提名</li>
+        </ol>
+      </article>
+      <article class="nb-spec__item">
+        <span class="nb-tag nb-tag--green">投票中</span>
+        <h3 class="nb-h3" style="margin-top:10px">《镜头之外》人物访谈</h3>
+        <p class="nb-muted">访谈专题聚焦创作者的真实处境，谈收入、谈焦虑、谈坚持，希望为社区保留更立体的行业观察。</p>
+        <ol>
+          <li>第 1 期：从零到十万播放的三个月</li>
+          <li>第 2 期：全职与副业的取舍</li>
+          <li>第 3 期：镜头前的自我表达</li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S5 创作者矩阵 -->
+<section class="nb-section" id="nb-authors">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">创作者矩阵<span> · 官方认证</span></h2>
+    <p class="nb-lead">美女抠逼社区汇聚来自不同领域的专业创作者，他们以匠心打磨作品，是平台内容质量与口碑的基石。点击卡片查看作者详情。</p>
+    <div class="nb-authors" id="nbAuthors">
+      <article class="nb-author" data-nb-author="林见深|纪实影像|纪实影像导演，擅长街头纪录与人物跟拍，代表作《镜头里的第 1000 天》。|48|12.6万|纪录片导演，长期用镜头记录城市边缘的真实生活。相信慢工出细活，作品以自然光与长镜头见长，曾入围多个短片展映单元，也是社区里最愿意分享拍摄笔记的创作者之一。">
+        <div class="nb-avatar" style="background:linear-gradient(135deg,#ff5a5f,#ffb15c)">林</div>
+        <div><h4>林见深</h4><span class="nb-muted">纪实影像 · 作品 48 · 粉丝 12.6 万</span><p class="nb-muted" style="margin-top:6px">用自然光与长镜头记录城市边缘的真实生活，愿意把拍摄笔记公开给社区新人。</p></div>
+      </article>
+      <article class="nb-author" data-nb-author="苏晚巢|家居改造|出租屋改造达人，专注小空间收纳与氛围灯光，作品以低成本可复制著称。|63|9.8万|从小户型居住者成长为家居内容创作者，坚持“先好用再好看”。她的改造视频都附带预算表与选品清单，帮助大量年轻人改善租房体验，是社区实用派的代表。">
+        <div class="nb-avatar" style="background:linear-gradient(135deg,#3ce3b4,#3c9ce3)">苏</div>
+        <div><h4>苏晚巢</h4><span class="nb-muted">家居改造 · 作品 63 · 粉丝 9.8 万</span><p class="nb-muted" style="margin-top:6px">坚持“先好用再好看”，改造视频附预算表，帮助年轻人改善租房体验。</p></div>
+      </article>
+      <article class="nb-author" data-nb-author="沈知味|美食烹饪|美食影像创作者，擅长用镜头语言讲菜，强调食物与人的关系。|39|15.2万|美食影像创作者，把做菜过程当作叙事练习。她的视频节奏克制，注重环境声与器物细节，主张“菜要好吃，也要好看，更要讲得清楚”，长期更新家常菜系列。">
+        <div class="nb-avatar" style="background:linear-gradient(135deg,#ff8a5c,#e33c9c)">沈</div>
+        <div><h4>沈知味</h4><span class="nb-muted">美食烹饪 · 作品 39 · 粉丝 15.2 万</span><p class="nb-muted" style="margin-top:6px">把做菜当叙事练习，注重环境声与器物细节，长期更新家常菜系列。</p></div>
+      </article>
+      <article class="nb-author" data-nb-author="声画实验室|教程干货|音频与拍摄技巧教学账号，以严谨测评和参数化对比受社区认可。|76|8.4万|由两位录音师与一位摄影指导组成的创作小组，专注声音与画面的技术分解。内容以对比测试、参数表和现场实录为主，被社区称为“最省试错成本的教程账号”。">
+        <div class="nb-avatar" style="background:linear-gradient(135deg,#3c9ce3,#8b5cf6)">声</div>
+        <div><h4>声画实验室</h4><span class="nb-muted">教程干货 · 作品 76 · 粉丝 8.4 万</span><p class="nb-muted" style="margin-top:6px">录音师与摄影指导组成，专注声音与画面技术分解，被称“最省试错成本的教程账号”。</p></div>
+      </article>
+      <article class="nb-author" data-nb-author="白桃观察|萌宠与社区|社区观察类创作者，记录流浪动物与街坊日常，兼顾温情与公共议题。|52|11.1万|长期驻扎社区拍摄，关注流浪动物、老人与街区关系。她的影像不刻意煽情，却常让人停下来想一会儿，作品多次被本地公益组织转载，体现平台的社会责任倡导。">
+        <div class="nb-avatar" style="background:linear-gradient(135deg,#ff5a5f,#8b5cf6)">白</div>
+        <div><h4>白桃观察</h4><span class="nb-muted">萌宠与社区 · 作品 52 · 粉丝 11.1 万</span><p class="nb-muted" style="margin-top:6px">记录流浪动物与街坊日常，不刻意煽情，作品多次被本地公益组织转载。</p></div>
+      </article>
+      <article class="nb-author" data-nb-author="顾南枝|人物访谈|访谈主持人，擅长长对话与追问，聚焦创作者生存状态与行业观察。|31|7.2万|访谈主持人，做过七年深度报道。她的提问温和但直接，能把创作者从“介绍作品”带到“讲述选择”，代表栏目《镜头之外》被视为社区了解行业的重要窗口。">
+        <div class="nb-avatar" style="background:linear-gradient(135deg,#e3c23c,#3ce3b4)">顾</div>
+        <div><h4>顾南枝</h4><span class="nb-muted">人物访谈 · 作品 31 · 粉丝 7.2 万</span><p class="nb-muted" style="margin-top:6px">做过七年深度报道，提问温和但直接，代表栏目《镜头之外》是社区行业窗口。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S6 图文索引 / 评论 -->
+<section class="nb-section nb-section--alt" id="nb-index">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">图文索引与社区评价<span> · 口碑沉淀</span></h2>
+    <p class="nb-lead">除视频之外，美女抠逼官网也沉淀图文笔记与社区短评，方便用户按兴趣快速定位内容，形成可持续浏览的内容生态。</p>
+    <div class="nb-index">
+      <article class="nb-index__item">
+        <span class="nb-index__num">01</span>
+        <div><h4>新手拍摄的 10 个常见失误</h4><p>图文教程 · 附错误示范对比图 · 收藏 6,120</p></div>
+        <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+      </article>
+      <article class="nb-index__item">
+        <span class="nb-index__num">02</span>
+        <div><h4>一室户改造的完整预算清单</h4><p>家居收纳 · 含采购表格与灯具型号 · 收藏 4,880</p></div>
+        <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+      </article>
+      <article class="nb-index__item">
+        <span class="nb-index__num">03</span>
+        <div><h4>如何为一个三分钟故事写分镜</h4><p>创作幕后 · 手绘分镜范式拆解 · 收藏 5,430</p></div>
+        <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+      </article>
+      <article class="nb-index__item">
+        <span class="nb-index__num">04</span>
+        <div><h4>社区投稿被选中后的完整流程</h4><p>官方攻略 · 从投稿到上首页的时间线 · 收藏 3,960</p></div>
+        <button class="nb-btn nb-btn--sm nb-btn--ghost" data-nb-modal="share">分享</button>
+      </article>
+    </div>
+
+    <h3 class="nb-h3" style="margin-top:44px">社区用户评价</h3>
+    <div class="nb-comments">
+      <div class="nb-comment"><p>“在美女抠逼看了一年多，最大的感受是干净。没有乱七八糟的搬运，点进去基本都是原创。” </p><span>—— 用户 · 老井</span></div>
+      <div class="nb-comment"><p>“《小城的一天》让我重新想起自己老家的早市，看完立刻给家里打了电话。这种真实很难得。”</p><span>—— 用户 · 阿澜</span></div>
+      <div class="nb-comment"><p>“教程区是真的有用，声画实验室那条收音频我照着做，确实改善不少。”</p><span>—— 用户 · 剪辑新手小陈</span></div>
+      <div class="nb-comment"><p>“画质稳定，播放器不卡，这一点比很多平台都强。希望继续支持高清。”</p><span>—— 用户 · 山间来客</span></div>
+      <div class="nb-comment"><p>“投稿后被编辑回复了修改意见，很具体，不是敷衍的模板话术，感动。”</p><span>—— 用户 · 半糖不加冰</span></div>
+      <div class="nb-comment"><p>“专题策划有想法，不是一个话题反复炒，能看出编辑在认真选题。”</p><span>—— 用户 · 温舟</span></div>
+      <div class="nb-comment"><p>“唯一建议：希望增加按拍摄设备筛选的功能，找教程会更快。”</p><span>—— 用户 · 三脚架爱好者</span></div>
+      <div class="nb-comment"><p>“社区氛围不错，评论区很少有戾气，愿意在这里发作品。”</p><span>—— 用户 · 宁小北</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- M15 品牌解析（关键词解析 800 字以上） -->
+<section class="nb-section" id="nb-analysis">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">品牌深度解析<span> · 关于美女抠逼</span></h2>
+    <p class="nb-lead">了解一个视频品牌的定位，最好的方式不是看口号，而是看它长期在做什么、如何运营、以及用户为什么愿意留下。</p>
+    <div class="nb-analysis">
+      <span class="nb-tag">企业背景</span>
+      <h3 class="nb-h3">从兴趣社区到持续运营的视频品牌</h3>
+      <p>美女抠逼起步于一个很小规模的兴趣小组，最初只是几位影像爱好者交换拍摄素材的私人角落。随着加入的人越来越多，一个朴素的问题浮现出来：如果想让好内容被持续看见，就必须有稳定的规则、清晰的分类和可以信赖的编辑标准。于是，这个小社区逐步走向企业化运营，形成了今天的美女抠逼官方网站——一个以原创、正版、高清为基本要求的视频品牌平台。我们没有把“大而全”当作目标，而是选择在纪实影像、生活方式与创作教学三个垂直领域深耕，让每一类用户都能找到稳定更新的内容入口。品牌故事并不传奇，它的核心只有一句话：把真实的东西认真做下去。</p>
+      <span class="nb-tag nb-tag--green">内容生态</span>
+      <h3 class="nb-h3">内容生态如何运转：创作者、编辑与用户的三方协作</h3>
+      <p>平台的内容生态由三条线共同支撑。第一条是创作者线，社区现有近千位通过认证的专业创作者，覆盖日常记录、经验分享、教程干货、深度测评、人物访谈、城市探索、在地文化、创作幕后、行业观察、实用技巧、情感故事、治愈影像等方向。每位创作者都拥有清晰的作品主页与数据面板，投稿、修改、上架、复盘形成闭环。第二条是编辑线，官方编辑团队每周进行选题会，负责专题企划、首页推荐与内容分级，确保精品内容有稳定的曝光机会，而不是完全依赖算法起伏。第三条是用户线，用户的点赞、收藏、评论与举报共同构成口碑判断，长评与短评都会被纳入内容评估，避免只看播放量的单一指标。这三条线共同决定了美女抠逼的口碑积累方式：内容品质优先，社区氛围其次，商业合作再次。我们相信，一个值得信赖的平台不是靠一次推广建立的，而是靠每一天的更新、每一次回复和每一条被认真处理的反馈累积出来的。</p>
+      <span class="nb-tag">品牌价值</span>
+      <h3 class="nb-h3">为什么我们强调“官方”与“原创”：品质标准的三个细节</h3>
+      <p>第一，原创审核。所有上传内容都需要通过来源校验与人工抽检，搬运、拼接、去水印的二次传播会被限制展示。第二，高清标准。平台优先推荐 1080P 及以上素材，并提供播放器画质说明，避免用户在低清晰度内容里浪费时间。第三，信息完整。每一条视频都必须标明作者、时长、内容标签与必要的创作说明，让用户点击前就能判断是否符合需求。这些细节看起来琐碎，却直接决定了用户是否愿意长期停留。我们也因此在内容分级上做了取舍：宁可将首页位置让给一部认真拍摄的十分钟短片，也不愿用十条同质化内容去填满版面。这种取舍让增长速度并不激进，但社区留存与创作者信任度保持稳定。企业动态栏目每月公开内容审核数据与专题进度，接受社区监督，这也是我们理解的社会责任的一部分。</p>
+      <span class="nb-tag nb-tag--green">用户与未来</span>
+      <h3 class="nb-h3">面向未来的社区计划：创新、包容与陪伴</h3>
+      <p>接下来一年，美女抠逼官网将围绕三件事推进。其一，创作挑战常态化。每季度举办一次主题挑战，从报名、上传、投票到官方发布形成完整链路，让新人有被看见的机会。其二，教程体系化。把分散的技巧内容整理成可循序学习的路径，配合脚本灵感、标题建议与剪辑思路等工具，降低创作门槛。其三，线下与线上联动。通过城市探索企划与本地创作者合作，把在地文化带进平台，让内容不止停留在屏幕。我们始终认为，视频品牌的价值不在于制造多少热点，而在于能否陪伴一代创作者从第一次按下录制键，走到能够表达自己想法的阶段。真实、温暖、有力量的内容，永远需要时间；而美女抠逼愿意做那个持续运营、把时间花在内容品质上的平台。我们希望每一位用户都能在这里找到值得收藏的作品，也希望每一位创作者都能在这里获得尊重与成长。</p>
+    </div>
+  </div>
+</section>
+
+<!-- S7 辅助区：企业动态 + 合作 + FAQ -->
+<section class="nb-section nb-section--alt" id="nb-news">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">企业动态<span> · 官方发布</span></h2>
+    <p class="nb-lead">来自美女抠逼官方的最新消息、内容更新与社区公告，按发布时间排列。</p>
+    <div class="nb-grid3">
+      <article class="nb-card"><span class="nb-tag">2026-11-18</span><h3 class="nb-h3" style="margin-top:10px">秋季精品片单发布</h3><p>本次片单共收录 12 部原创高清作品，涵盖纪实、访谈与生活方式三个方向，首页专题位已同步更新。</p></article>
+      <article class="nb-card"><span class="nb-tag nb-tag--green">2026-11-09</span><h3 class="nb-h3" style="margin-top:10px">创作者认证体系升级</h3><p>新增作品完整度与社区贡献两项评估维度，认证审核周期缩短至五个工作日，投稿入口同步优化。</p></article>
+      <article class="nb-card"><span class="nb-tag">2026-10-27</span><h3 class="nb-h3" style="margin-top:10px">播放器高清模式上线</h3><p>支持手动选择画质与记忆偏好，弱网环境自动降级提示，进一步提升高清内容的观看稳定性。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="nb-section" id="nb-partners">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">合作品牌<span> · 生态伙伴</span></h2>
+    <p class="nb-lead">美女抠逼与影像设备、本地文化机构与公益组织保持长期合作，共同推动原创内容与行业观察。</p>
+    <div class="nb-partners">
+      <div class="nb-partner"><b>光屿影像</b>设备支持</div>
+      <div class="nb-partner"><b>城市记忆馆</b>在地文化</div>
+      <div class="nb-partner"><b>拾光公益</b>社会责任</div>
+      <div class="nb-partner"><b>声音工坊</b>音频技术</div>
+    </div>
+  </div>
+</section>
+
+<section class="nb-section nb-section--alt" id="nb-faq">
+  <div class="nb-wrap">
+    <h2 class="nb-h2">帮助中心<span> · 常见问题</span></h2>
+    <p class="nb-lead">关于投稿、审核、播放与账号的常见疑问，均可在此找到官方说明。</p>
+    <div class="nb-faq">
+      <details><summary>如何向美女抠逼官网投稿？</summary><p>点击页面中的“我要投稿”按钮，填写作品标题、简介、标签与原始文件下载链接即可。编辑会在五个工作日内回复审核结论，通过后进入上架流程。</p></details>
+      <details><summary>投稿对画质有什么要求？</summary><p>建议 1080P 及以上，帧率 25 或 30 帧，码率不低于 8Mbps。若素材为手机拍摄，请尽量保持横屏并避免过度数码变焦。</p></details>
+      <details><summary>搬运或二次剪辑的内容可以发布吗？</summary><p>平台以原创为正版基础，未经授权的搬运、去水印与拼接内容不予展示。引用素材需在简介中注明来源与授权情况。</p></details>
+      <details><summary>为什么我的作品播放量增长较慢？</summary><p>播放受发布时间、标签准确度与封面质量影响。建议完善内容说明、选择具体标签，并参与当季创作挑战以获得推荐机会。</p></details>
+      <details><summary>如何申请创作者认证？</summary><p>在个人主页提交认证申请，附作品列表与领域说明。审核维度包括作品完整度、更新稳定性与社区贡献，通常五个工作日内完成。</p></details>
+      <details><summary>平台如何处理不友善评论？</summary><p>可在评论旁点击举报，编辑会依据社区规范处理。多次违规的账号将被限制互动功能，处理结果会通过站内通知告知。</p></details>
+      <details><summary>能否下载平台上的高清视频？</summary><p>仅作者本人可在后台下载原始文件。普通用户可收藏与分享链接，平台不支持未经授权的离线下载。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- S8 页脚 -->
+<footer class="nb-footer" id="nb-footer">
+  <div class="nb-wrap">
+    <div class="nb-footer__grid">
+      <div>
+        <h5>美女抠逼 · 官方网站</h5>
+        <p style="margin:0 0 10px">专注原创高清视频与创作者生态，深耕纪实影像、生活方式与创作教学领域，持续运营值得信赖的视频社区。</p>
+        <p style="margin:0">合作联系：bd@example-brand.cn</p>
+      </div>
+      <div>
+        <h5>内容</h5>
+        <a href="#nb-focus">精品内容</a>
+        <a href="#nb-videos">热门视频流</a>
+        <a href="#nb-specials">专题企划</a>
+        <a href="#nb-index">图文索引</a>
+      </div>
+      <div>
+        <h5>社区</h5>
+        <a href="#nb-authors">创作者矩阵</a>
+        <a href="#nb-index">用户评价</a>
+        <a href="#nb-news">企业动态</a>
+        <a href="#nb-faq">帮助中心</a>
+      </div>
+      <div>
+        <h5>关于</h5>
+        <a href="#nb-analysis">品牌解析</a>
+        <a href="#nb-partners">合作品牌</a>
+        <a href="#nbTop">回到顶部</a>
+        <a href="#" data-nb-modal="submit">投稿入口</a>
+      </div>
+    </div>
+    <div class="nb-footer__bottom">
+      <span>© 2026 美女抠逼 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容以原创正版为主 · 备案号：示例备案 2026001122 号</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗 -->
+<div class="nb-modal" id="nbModal" role="dialog" aria-modal="true" aria-labelledby="nbModalTitle">
+  <div class="nb-modal__box">
+    <h3 class="nb-h3" id="nbModalTitle">温馨提示</h3>
+    <p id="nbModalBody"></p>
+    <button class="nb-btn nb-btn--primary nb-modal__close" id="nbModalClose">我知道了</button>
+  </div>
+</div>
+
+<div class="nb-toast" id="nbToast" role="status" aria-live="polite"></div>
+<button class="nb-backtop" id="nbBacktop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+  var topstack = document.getElementById('nbTop');
+  var modal = document.getElementById('nbModal');
+  var modalTitle = document.getElementById('nbModalTitle');
+  var modalBody = document.getElementById('nbModalBody');
+  var toast = document.getElementById('nbToast');
+  var toastTimer = null;
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('nbBurger');
+  var mobileNav = document.getElementById('nbMobileNav');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileNav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索提示 */
+  var searchInput = document.getElementById('nbSearchInput');
+  var searchTip = document.getElementById('nbSearchTip');
+  var keywordData = ['林见深','苏晚巢','沈知味','声画实验室','镜头的第 1000 天','小城的一天','剪辑台','城市探索','教程干货','人物访谈','美食烹饪','家居收纳'];
+  searchInput.addEventListener('input', function(){
+    var v = searchInput.value.trim();
+    if(!v){ searchTip.classList.remove('show'); searchTip.textContent=''; return; }
+    var hits = keywordData.filter(function(k){ return k.indexOf(v) !== -1; });
+    searchTip.classList.add('show');
+    searchTip.textContent = hits.length
+      ? '找到 ' + hits.length + ' 个相关结果：' + hits.join('、') + '（示例检索提示）'
+      : '暂未匹配到「' + v + '」，试试“创作者”“专题”或“教程”等关键词';
+  });
+
+  /* 弹窗 */
+  function openModal(title, body){
+    modalTitle.textContent = title;
+    modalBody.textContent = body;
+    modal.classList.add('show');
+  }
+  function closeModal(){ modal.classList.remove('show'); }
+  document.getElementById('nbModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-nb-modal]');
+    if(!t) return;
+    var type = t.getAttribute('data-nb-modal');
+    if(type === 'share'){
+      openModal('分享这部作品', '你可以通过微信、微博或复制链接的方式分享给朋友。原创内容欢迎转发，转载请联系作者获取授权，共同维护正版内容生态。');
+    } else if(type === 'submit'){
+      openModal('我要投稿', '投稿流程：填写作品标题与简介 → 上传预览文件 → 选择内容标签 → 提交审核。编辑会在五个工作日内回复，通过后安排上架与推荐。请确保作品为原创且符合社区规范。');
+    }
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-nb-like]');
+    if(like){
+      var on = like.classList.toggle('on');
+      var raw = like.textContent.replace('♡','').replace('♥','').trim();
+      var num = parseFloat(raw.replace('万',''));
+      var isWan = raw.indexOf('万') !== -1;
+      if(isWan){ num = num + (on ? 0.1 : -0.1); like.textContent = (on?'♥ ':'♡ ') + num.toFixed(1) + ' 万'; }
+      else { var n = parseInt(raw.replace(/,/g,''),10) || 0; n = n + (on?1:-1); like.textContent = (on?'♥ ':'♡ ') + n.toLocaleString('zh-CN'); }
+      showToast(on ? '已点赞，感谢你的支持' : '已取消点赞');
+      return;
+    }
+    var fav = e.target.closest('[data-nb-fav]');
+    if(fav){
+      var f = fav.classList.toggle('on');
+      fav.textContent = f ? '★ 已收藏' : '☆ 收藏';
+      showToast(f ? '已加入收藏夹' : '已取消收藏');
+      return;
+    }
+    var au = e.target.closest('[data-nb-author]');
+    if(au){
+      var parts = au.getAttribute('data-nb-author').split('|');
+      openModal(parts[0] + ' · ' + parts[1], parts[3] + ' 字作品简介：' + parts[2] + ' 粉丝 ' + parts[4] + '。' + parts[5]);
+    }
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-nb-count]');
+  var done = false;
+  function runCounters(){
+    if(done) return;
+    done = true;
+    counters.forEach(function(el){
+      var target = parseFloat(el.getAttribute('data-nb-count'));
+      var isFloat = target % 1 !== 0;
+      var start = 0, step = target / 40, cur = 0;
+      var timer = setInterval(function(){
+        cur += step;
+        if(cur >= target){ cur = target; clearInterval(timer); }
+        el.textContent = isFloat ? cur.toFixed(1) : Math.floor(cur).toLocaleString('zh-CN');
+      }, 24);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCounters(); });
+    }, { threshold:.3 });
+    io.observe(document.querySelector('.nb-hero__stats'));
+  } else { runCounters(); }
+
+  /* 回到顶部 */
+  var backtop = document.getElementById('nbBacktop');
+  window.addEventListener('scroll', function(){
+    backtop.classList.toggle('show', window.scrollY > 420);
+  }, { passive:true });
+  backtop.addEventListener('click', function(){
+    window.scrollTo({ top:0, behavior:'smooth' });
+  });
+
+  /* 锚点滚动偏移（预留吸顶公告+页头高度） */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var id = a.getAttribute('href');
+    if(id.length < 2) return;
+    var el = document.querySelector(id);
+    if(!el) return;
+    e.preventDefault();
+    var offset = topstack.offsetHeight + 12;
+    var y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: Math.max(y,0), behavior:'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
